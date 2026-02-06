@@ -1,292 +1,161 @@
-﻿=== Team Builder Member Showcase - Team Slider, Team Grid Design ===
+﻿=== Team Member Team Showcase ===
 Contributors: awordpresslife, razipathhan, hanif0991, muhammadshahid, fkfaisalkhan007, sharikkhan007, zishlife, FARAZFRANK
 Donate link: https://paypal.me/awplife
-Tags: team members, our team, team member showcase, team builder, team
-Requires at least: 3.0
-Tested up to: 6.8.2
+Tags: team member, team showcase, staff directory, meet the team, our team
+Requires at least: 5.4
+Tested up to: 6.9
 Requires PHP: 7.2
-Stable tag: 0.1.15
+Stable tag: 0.1.16
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Create and display your dream team on your WordPress website in a few minutes.
-Team Members, Our Team, team member showcase, team builder, team.
+Display your team members with photos, bios, designations and social links in grid or slider layouts.
 
 == Description ==
 
-Team Builder Member Showcase is a responsive block builder plugin that can help you create "Meet the Team" page or section for your WordPress website.
+Want to introduce your team members to your website visitors? Team Member Showcase helps you create an attractive "Meet The Team" section for your WordPress site in just a few minutes.
 
-It gives idea of who exactly you'll be working with, and shows potential employees that you're proud of, the valuable people on your team. 
+Whether you run a business, agency, startup, or nonprofit organization, showing the faces behind your brand builds trust with potential clients and customers. This plugin lets you display team member photos, names, job titles, short bios, and social media profile links in a clean, organized layout.
 
-Team Builder Member Showcase plugin is a easy and effective way to create your team member showcase.
-
-It can be used to showcase or display your employees, team members, founders of company, staff, partners etc. With the help of this Team Builder Plugin,  you can quickly add "our team" page to your website with important member's information like name, their picture, position, social links etc. 
-
-Using shorcode, you can place it on any page and name it "meat the team", "about us", "team members", "our team" or "team member showcase" whatever you like. 
+**Free Version Demo:** **[Team Builder Member Showcase](https://awplife.com/demo/team-builder-member-showcase-wordpress-plugin/)**
+**Premium Version Demo:** **[Team Builder Member Showcase Premium](https://awplife.com/demo/team-builder-member-showcase-premium/)**
+**Where To Buy:** **[Buy Team Builder Member Showcase Premium](https://awplife.com/wordpress-plugins/team-builder-member-showcase-premium/)**
 
 https://youtu.be/As2La3_CqC0
 
-**Check Free Plugin Demo - <a href="https://awplife.com/demo/team-builder-member-showcase-wordpress-plugin/">Click Here</a>**
+**Why show your team on your website?**
 
+Visitors often want to know who they will be working with before making a decision. A well-designed team page helps establish credibility and gives your organization a human touch. Studies show that websites with team photos receive more engagement than those without.
 
-**Team Builder Member Showcase Premium [Live Demo] - <a href="https://awplife.com/demo/team-builder-member-showcase-premium/">Click Here</a>**
+**How it works:**
 
-**Free Plugin Features**
+Setting up your team showcase is straightforward. You add each team member with their photo, name, position, and bio through the WordPress admin panel. Then you pick a template design, configure your layout settings, and paste a shortcode wherever you want the team section to appear.
 
-* Latest Bootstrap 4.x Responsive Admin Dashboard
-* Responsive Showcase Design
-* 5 Team Template Design
-* Multiple Columns Settings
-* Dynamic Team Shortcode
-* Social Media Profile Linking
-* Compatible with All Major Browser
+== Free Version Features ==
 
-> #### **Pro Version Feature*** 
-> *	Latest Bootstrap 4.x Responsive Admin Dashboard
-> *	Responsive Showcase Design
-> * [22 Templet Design](https://awplife.com/demo/team-builder-member-showcase-premium/ "22 Templet Design")
-> *	Background Color Option
-> *	Description Color Option
-> *	Columns Settings
-> *	Owl Carousel Settings
-> *	Owl Carousel Columns
-> *	Auto Play Setting
-> *	Auto Play Pause On Hover Setting
-> *	Auto Play Speed Setting
-> *	Auto Play Time Out Setting
-> *	Pagination Bullets Setting
-> *	Social Icon Setting
-> *	Link Tab
-> *	Dynamic Team Shortcode
-> *	Compatible with All Major Browser
+* Responsive design that looks good on all devices
+* 5 ready-to-use template designs
+* Grid layout with flexible column settings (1-4 columns)
+* Add unlimited team members per showcase
+* Display member name, photo, designation, and bio
+* Social media profile links for each member
+* Simple shortcode to embed anywhere
+* Works with all major web browsers
+* Bootstrap 4.x admin dashboard
 
+== Premium Version Features ==
 
-https://www.youtube.com/watch?v=dS0GwpfQs3A
+The premium version includes everything in the free version plus:
 
-**Upgrade To Premium Plugin - <a href="https://awplife.com/wordpress-plugins/team-builder-member-showcase-premium/">Click Here</a>**
+* 22 professionally designed templates
+* Owl Carousel slider functionality
+* Auto-play with customizable speed and timeout
+* Pause on hover option
+* Carousel navigation dots
+* Custom background colors for member cards
+* Custom description text colors
+* Advanced column layout options
+* Social icon customization
+* Link tab settings for external URLs
+* Priority support
 
+== Use Cases ==
 
-== Screenshots == 
+* Company about us pages
+* Agency team sections
+* Startup founder profiles
+* Restaurant staff pages
+* Medical practice doctor listings
+* Law firm attorney bios
+* Real estate agent teams
+* Educational institution faculty pages
+* Church leadership pages
+* Sports team rosters
 
-* 01. Team Member Template One
-* 02. Team Member Template One
-* 03. Team Member Template Two
-* 04. Team Member Template Three
-* 05. Team Member Template Four
-* 06. Add Team Members
-* 07. Configure Team Shortcode Settings
-* 08. Team Member With Three Column Layout
-* 09. Team Member With Four Column Layout
-* 10. All Team Shortcode
-* 11. Admin Dashboard
+== Screenshots ==
+
+1. Team Member Template One
+2. Team Member Template One variation
+3. Team Member Template Two
+4. Team Member Template Three
+5. Team Member Template Four
+6. Add Team Members screen
+7. Configure Team Shortcode Settings
+8. Team Member with Three Column Layout
+9. Team Member with Four Column Layout
+10. All Team Shortcodes list
+11. Admin Dashboard
 
 == Installation ==
 
-Install Team Builder Member Showcase either via the WordPress.org plugin directory or by uploading the plugin zip file to your server.
-
-After activating the plugin, go to the plugin menu.
-
-Into WordPress admin dashboard, Go to menu: TBMS (Team Builder Member Showcase) --> Add Team
-
-Type the team post title.
-
-Select an available design template.
-
-Add team member images and fill their details.
-
-Copy the shortcode and paste the shortcode into any page or post.
-
-View the page for Team Builder Member Showcase output.
+1. Download the plugin from WordPress.org or upload the plugin zip file through Plugins > Add New.
+2. Activate the plugin through the Plugins menu.
+3. Go to TBMS (Team Builder Member Showcase) > Add Team in your WordPress dashboard.
+4. Enter a title for your team showcase.
+5. Select a template design from the available options.
+6. Add your team members with their photos, names, designations, bios, and social links.
+7. Copy the generated shortcode and paste it into any page or post.
+8. View the page to see your team showcase.
 
 == Frequently Asked Questions ==
 
-= How do I use team builder plugin? =
-Plugin only works with WordPress based website. You need to download, install and activate the plugin first. Create new team shortcode and embed them on any page or post display team.
+= How do I add team members to my website? =
+After activating the plugin, go to TBMS > Add Team. Create a new team, add your members with their details, and paste the shortcode on any page or post where you want the team to appear.
 
-= How to create team shortcode? =
+= Can I add multiple team showcases on the same page? =
+Yes, you can add as many different team shortcodes as you need on a single page. Each shortcode displays its own set of team members with its own template and settings.
 
-Login into WordPress admin dashboard, Go to menu: TBMS (Team Builder Member Showcase) --> Add Team
-Add a post title
-Select the Template design
-Add the team member pictures with their Name, Designation, Bio and Social profile links.
-Configure setting like how many member you want to display per row, member picture hover and background color, bio text color and set social link opening target.
+= Is there a limit to how many team members I can add? =
+No, there is no limit. You can add as many team members as needed in each showcase.
 
-= How to display team member on website page or post? =
-After creating team member shortcode copy the shortcode, its look like `[TBMS id=9]`. Paste the copied shortcode in the content part of the post or page.
+= Will this work with my theme? =
+The plugin is designed to work with any properly coded WordPress theme. The responsive templates adapt to your theme's content width automatically.
 
-= Can I show multiple team shortcode on same page? =
-Yes, you can absolutely show multiple team shortcode on single page or post.
+= Can I show team members in a slider instead of a grid? =
+The free version displays teams in a grid layout. The premium version includes Owl Carousel slider functionality with auto-play, navigation dots, and customizable speed settings.
 
-= Are there any limit adding team member images in single team shortcode? =
-No, there is no limit to adding team members in single team shortcode.
+= How do I add social media links for team members? =
+When adding or editing a team member, you will see fields for social media profile URLs. Simply paste the links to their Facebook, Twitter, LinkedIn, Instagram, or other profiles.
+
+= Can I customize the colors of the team cards? =
+Basic styling works with the free version. The premium version offers background color options and description text color customization for complete control over the look.
+
+= Does this plugin work with page builders? =
+Yes, you can use the shortcode in most page builders including Elementor, Beaver Builder, Divi, and the native WordPress block editor.
+
+= Is the plugin translation ready? =
+Yes, the plugin supports translation. You can translate it into your language using standard WordPress translation methods.
+
+= Where can I get support if I have questions? =
+For the free version, use the WordPress.org support forum. Premium users receive priority support through our website.
 
 == Changelog ==
 
-= 0.1.15 =
+= 0.1.16 =
+* Bug fixes
+* Tested with WordPress 6.9
 
-* Bug Fix: Fixed.
-* Testing plugin for wordpress 6.8.2
+= 0.1.15 =
+* Bug fixes
+* Tested with WordPress 6.8.3
 
 = 0.1.14 =
-
-* Bug Fix: Fixed.
-* Testing plugin for wordpress 6.8.1
+* Bug fixes
+* Tested with WordPress 6.8.1
 
 = 0.1.13 =
-
-* Bug Fix: Fixed.
-* Testing plugin for wordpress 6.7.2
+* Bug fixes
+* Tested with WordPress 6.7.2
 
 = 0.1.12 =
-
-* Bug Fix: Fixed.
-* Testing plugin for wordpress 6.7.1
+* Bug fixes
+* Tested with WordPress 6.7.1
 
 = 0.1.11 =
-
-* Bug Fix: Fixed.
-* Testing plugin for wordpress 6.6.2
-
-= 0.1.10 =
-
-* Testing plugin for wordpress 6.6.1
-
-= 0.1.9 =
-
-* New Template Added
-
-= 0.1.8 =
-
-* Testing plugin for wordpress 6.5.4
-
-= 0.1.7 =
-* Bug Fix: Fixed.
-* Additional changes: None.
-* Testing plugin for wordpress 6.4.3
-
-= 0.1.6 =
-* Bug Fix: Fixed.
-* Additional changes: None.
-* Testing plugin for wordpress 6.4.2
-
-= 0.1.5 =
-* Bug Fix: Fixed.
-* Additional changes: None.
-* Testing plugin for wordpress 6.4.2
-
-= 0.1.4 =
-* Tested on wordpress verson 6.3.2
-
-= 0.1.3 =
-* Tested on wordpress verson 6.3.1
-
-= 0.1.2 =
-* Tested on wordpress verson 6.2.1
-
-= 0.1.1 =
-* Tested on wordpress verson 6.1.1
-
-= 0.1.0 =
-* Tested on wordpress verson 6.0.3
-* Codding bug fixed.
-
-Feature Enhancements: Version 0.0.21
-
-* WordPress security isshues fixed.
-* Enhancements: Yes, checked for wordpress 6.0.1
-
-Feature Enhancements: Version 0.0.20
-
-* Enhancements: Yes, checked for wordpress 6.0.1
-
-Feature Enhancements: Version 0.0.19
-
-* Enhancements: Yes, checked for wordpress 5.9.3
-
-Feature Enhancements: Version 0.0.18
-
-* Enhancements: Yes, checked for wordpress 5.9
-
-Feature Enhancements: Version 0.0.17
-
-* Enhancements: Yes, checked for wordpress 5.8.2
-* wordpress security isshues fixed
-
-Feature Enhancements: Version 0.0.16
-
-* Enhancements: Yes, checked for wordpress 5.8.1
-
-Feature Enhancements: Version 0.0.15
-
-* Enhancements: Yes, checked for wordpress 5.7.2
-
-Feature Enhancements: Version 0.0.14
-
-* Enhancements: Yes, checked for wordpress 5.7.1
-
-Feature Enhancements: Version 0.0.13
-
-* Enhancements: Yes, checked for wordpress 5.7
-
-Feature Enhancements: Version 0.0.12
-
-* Enhancements: Yes, checked for wordpress 5.6.2
-
-Feature Enhancements: Version 0.0.11
-
-* Enhancements: Yes, checked for wordpress 5.6
-* Bug: Fixed
-* Template Css Fixed.
-
-Feature Enhancements: Version 0.0.10
-
-* Enhancements: Yes, checked for wordpress 5.5.3
-* Bug: Fixed
-
-Feature Enhancements: Version 0.0.9
-
-* Enhancements: Yes, checked for wordpress 5.5.3
-
-eature Enhancements: Version 0.0.8
-
-* Enhancements: Yes, checked for wordpress 5.5.1
-
-Feature Enhancements: Version 0.0.7
-
-* Enhancements: Yes, checked for wordpress 5.5
-
-Feature Enhancements: Version 0.0.6
-
-* Enhancements: Yes, checked for wordpress 5.4.2
-
-Feature Enhancements: Version 0.0.5
-
-* Enhancements: Yes, checked for wordpress 5.4.2
-* Additional changes: Auto Masonry Fixed
-
-Feature Enhancements: Version 0.0.4
-
-* Enhancements: Yes, checked for wordpress 5.4.1
-* Additional changes: None
-
-
-Feature Enhancements: Version 0.0.3
-
-* Enhancements: Yes
-* Additional changes: None
-
-
-Feature Enhancements: Version 0.0.2
-
-* Enhancements: Yes
-* Bug Fix: Dashboard UI conflict fixed
-* Additional changes: None
-
-Feature Enhancements: Version 0.0.1
-
-* Enhancements: None
-* Bug Fix: Dashboard UI conflict fixed
-* Additional changes: None
+* Bug fixes
+* Tested with WordPress 6.6.2
 
 == Upgrade Notice ==
-First plugin version, start with it and share your feedback with us.
+
+= 0.1.16 =
+Bug fixes and WordPress 6.9 compatibility testing. Update recommended for all users.

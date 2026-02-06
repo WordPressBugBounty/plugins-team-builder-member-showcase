@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Plugin Name:       Team Builder Member Showcase
  * Plugin URI:        https://awplife.com/
  * Description:       Create and display your dream team on your WordPress website in few minutes.
- * Version:           0.1.15
+ * Version:           0.1.16
  * Requires at least: 5.4
  * Requires PHP:      7.2
  * Author:            A WP Life
@@ -51,7 +51,7 @@ if ( ! class_exists( 'TBMS_AWPLIFE' ) ) {
 			define( 'TBMS_TXTDM', 'team-builder-member-showcase' );
 
 			// Plugin Name
-			define( 'TBMS_PLUGIN_NAME', __( 'Team Builder Member Showcase', TBMS_TXTDM ) );
+			define( 'TBMS_PLUGIN_NAME', 'Team Builder Member Showcase' );
 
 			// Plugin Slug
 			define( 'TBMS_PLUGIN_SLUG', 'tbms_cpt_name' );
@@ -68,7 +68,7 @@ if ( ! class_exists( 'TBMS_AWPLIFE' ) ) {
 
 		protected function _hooks() {
 			// Load text domain
-			add_action( 'plugins_loaded', array( $this, 'tbms_load_textdomain' ) );
+			add_action( 'init', array( $this, 'tbms_load_textdomain' ) );
 
 			// create TBMS custom post callback
 			add_action( 'init', array( $this, 'tbms_cpt' ) );

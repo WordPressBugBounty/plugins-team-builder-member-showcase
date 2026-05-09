@@ -63,25 +63,31 @@ input[name=tbms_template_design] {
 	visibility: hidden;
 }
 .team_layout {
-box-shadow: 3px 4px 20px 0px #999;
-opacity: 0.9;
-display: inline-block;
-font: normal normal normal 14px/1 FontAwesome;
-font-size: inherit;
-text-rendering: auto;
--webkit-font-smoothing: antialiased;
+	display: block;
+	position: relative;
+	box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+	opacity: 0.95;
+	border: 4px solid #61ACEB;
+	border-radius: 6px;
+	transition: all 0.2s ease;
 }
 
 .team_layout:after {
-content: "\f00c";
-position: absolute;
-opacity: 1;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
--ms-transform: translate(-50%, -50%);
-color: #f00;
-font-size: 45px;
+	content: "";
+	position: absolute;
+	opacity: 1; 
+	top: 8px;
+	right: 8px;
+	width: 28px;
+	height: 28px;
+	background-color: #61ACEB;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'></polyline></svg>");
+	background-size: 16px 16px;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+	z-index: 10;
 }
 
 

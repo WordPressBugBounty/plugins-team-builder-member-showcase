@@ -132,7 +132,7 @@ if ( isset( $tbms_post_settings['tbms_custom_css'] ) ) {
 }
 ?>
 <p>
-<textarea type="text" id="tbms_custom_css" name="tbms_custom_css" class="form-control" placeholder="<?php esc_html_e( 'Custom Css', 'team-builder-member-showcase' ); ?>" rows="3"><?php echo $tbms_custom_css; ?></textarea>
+<textarea type="text" id="tbms_custom_css" name="tbms_custom_css" class="form-control" placeholder="<?php esc_html_e( 'Custom Css', 'team-builder-member-showcase' ); ?>" rows="3"><?php echo esc_textarea( $tbms_custom_css ); ?></textarea>
 </p>
 
 <script>

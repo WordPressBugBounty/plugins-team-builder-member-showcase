@@ -1,76 +1,84 @@
-﻿=== Team Member Team Showcase ===
+=== Team Builder Member Showcase ===
 Contributors: awordpresslife, razipathhan, hanif0991, muhammadshahid, fkfaisalkhan007, sharikkhan007, zishlife, FARAZFRANK
 Donate link: https://paypal.me/awplife
 Tags: team member, team showcase, staff directory, meet the team, our team
 Requires at least: 5.4
 Tested up to: 6.9
 Requires PHP: 7.2
-Stable tag: 0.1.16
+Stable tag: 0.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Display your team members with photos, bios, designations and social links in grid or slider layouts.
+Build a beautiful Team Builder Member Showcase with simple shortcodes, responsive grids, and clean bios.
 
-== Description ==
+== Team Builder Member Showcase Description ==
 
-Want to introduce your team members to your website visitors? Team Member Showcase helps you create an attractive "Meet The Team" section for your WordPress site in just a few minutes.
+Want to show your staff on your website?
+The Team Builder Member Showcase helps you create a professional page.
+You can share team details in just a few minutes.
 
-Whether you run a business, agency, startup, or nonprofit organization, showing the faces behind your brand builds trust with potential clients and customers. This plugin lets you display team member photos, names, job titles, short bios, and social media profile links in a clean, organized layout.
+This team member showcase is fully responsive.
+It works perfectly on mobile phones, tablets, and computers.
+Sharing the faces of your team builds trust with clients.
 
-**Free Version Demo:** **[Team Builder Member Showcase](https://awplife.com/demo/team-builder-member-showcase-wordpress-plugin/)**
-**Premium Version Demo:** **[Team Builder Member Showcase Premium](https://awplife.com/demo/team-builder-member-showcase-premium/)**
-**Where To Buy:** **[Buy Team Builder Member Showcase Premium](https://awplife.com/wordpress-plugins/team-builder-member-showcase-premium/)**
+With this builder, you can add names and photos.
+You can also add jobs, short bios, and social links.
+Everything displays in a clean and organized grid layout.
+
+Free Version Demo: **[Team Builder Member Showcase Free](https://awplife.com/demo/team-builder-member-showcase-wordpress-plugin/)**
+Premium Version Demo: **[Team Builder Member Showcase Premium ](https://awplife.com/demo/team-builder-member-showcase-premium/)**
+Where To Buy: **[Premium Version Detail Page](https://awplife.com/wordpress-plugins/team-builder-member-showcase-premium/)**
 
 https://youtu.be/As2La3_CqC0
 
-**Why show your team on your website?**
+Why use a builder showcase?
+* It introduces your staff to website visitors.
+* It helps build credibility and trust.
+* It gives your business a human touch.
+* It keeps visitors engaged on your site.
 
-Visitors often want to know who they will be working with before making a decision. A well-designed team page helps establish credibility and gives your organization a human touch. Studies show that websites with team photos receive more engagement than those without.
+How to create your showcase:
+* Add staff members inside the admin panel.
+* Pick one of the beautiful templates.
+* Paste the shortcode on any page.
 
-**How it works:**
+== Team Builder Member Showcase Features ==
 
-Setting up your team showcase is straightforward. You add each team member with their photo, name, position, and bio through the WordPress admin panel. Then you pick a template design, configure your layout settings, and paste a shortcode wherever you want the team section to appear.
+Free Features:
+* Clean responsive layout for all modern screens.
+* 5 ready-to-use template designs.
+* Simple shortcode builder to display your team.
+* Grid system with 1 to 4 columns.
+* Unlimited team member entries.
+* Fields for photos, names, titles, and bios.
+* Social media links for each staff member.
+* Works with all popular web browsers.
+* Simple bootstrap administrative panel.
 
-== Free Version Features ==
-
-* Responsive design that looks good on all devices
-* 5 ready-to-use template designs
-* Grid layout with flexible column settings (1-4 columns)
-* Add unlimited team members per showcase
-* Display member name, photo, designation, and bio
-* Social media profile links for each member
-* Simple shortcode to embed anywhere
-* Works with all major web browsers
-* Bootstrap 4.x admin dashboard
-
-== Premium Version Features ==
-
-The premium version includes everything in the free version plus:
-
-* 22 professionally designed templates
-* Owl Carousel slider functionality
-* Auto-play with customizable speed and timeout
-* Pause on hover option
-* Carousel navigation dots
-* Custom background colors for member cards
-* Custom description text colors
-* Advanced column layout options
-* Social icon customization
-* Link tab settings for external URLs
-* Priority support
+Premium Features:
+* 22 professionally designed templates.
+* Owl Carousel slider for your team showcase.
+* Autoplay settings with custom speed controls.
+* Pause carousel on mouse hover.
+* Navigation dots and next/prev buttons.
+* Custom background colors for member cards.
+* Custom text and description color choices.
+* Advanced column options for responsiveness.
+* Customizable social media icons.
+* Link targets like new tabs or self.
+* Priority customer support desk.
 
 == Use Cases ==
 
-* Company about us pages
-* Agency team sections
-* Startup founder profiles
-* Restaurant staff pages
-* Medical practice doctor listings
-* Law firm attorney bios
-* Real estate agent teams
-* Educational institution faculty pages
-* Church leadership pages
-* Sports team rosters
+* Company about us pages.
+* Professional agency staff showcases.
+* Startup founder profile lists.
+* Restaurant chef and staff cards.
+* Medical doctor and clinic directories.
+* Law firm lawyer biographies.
+* Real estate agent grids.
+* School teacher and faculty tables.
+* Church leader profiles.
 
 == Screenshots ==
 
@@ -88,48 +96,61 @@ The premium version includes everything in the free version plus:
 
 == Installation ==
 
-1. Download the plugin from WordPress.org or upload the plugin zip file through Plugins > Add New.
-2. Activate the plugin through the Plugins menu.
-3. Go to TBMS (Team Builder Member Showcase) > Add Team in your WordPress dashboard.
-4. Enter a title for your team showcase.
-5. Select a template design from the available options.
-6. Add your team members with their photos, names, designations, bios, and social links.
-7. Copy the generated shortcode and paste it into any page or post.
-8. View the page to see your team showcase.
+* Download the zip file from WordPress.org.
+* Upload it via Plugins > Add New in dashboard.
+* Activate the plugin.
+* Go to TBMS > Add Team in your admin menu.
+* Set a title for your staff showcase.
+* Choose a layout template.
+* Add your staff photos and details.
+* Copy the shortcode and paste it anywhere.
 
-== Frequently Asked Questions ==
+== Team Builder Member Showcase Frequently Asked Questions ==
 
-= How do I add team members to my website? =
-After activating the plugin, go to TBMS > Add Team. Create a new team, add your members with their details, and paste the shortcode on any page or post where you want the team to appear.
+= How do I add a team member in this showcase? =
+Go to TBMS > Add Team in your dashboard.
+Create a new staff list and add details.
+Copy the shortcode and paste it on any page.
 
-= Can I add multiple team showcases on the same page? =
-Yes, you can add as many different team shortcodes as you need on a single page. Each shortcode displays its own set of team members with its own template and settings.
+= Can I build multiple showcases on one page? =
+Yes, you can build as many showcases as you like.
+Each shortcode will display different team member lists.
 
-= Is there a limit to how many team members I can add? =
-No, there is no limit. You can add as many team members as needed in each showcase.
+= Is there a limit to the showcase builder? =
+No, there is no limit.
+You can add as many staff profiles as you need.
 
-= Will this work with my theme? =
-The plugin is designed to work with any properly coded WordPress theme. The responsive templates adapt to your theme's content width automatically.
+= Will this team showcase work with my theme? =
+Yes, it works with all properly coded themes.
+The templates adapt to your page width automatically.
 
-= Can I show team members in a slider instead of a grid? =
-The free version displays teams in a grid layout. The premium version includes Owl Carousel slider functionality with auto-play, navigation dots, and customizable speed settings.
+= Can I turn my team member grid into a slider? =
+The free version uses a grid layout.
+The premium version adds a responsive slider with autoplay options.
 
-= How do I add social media links for team members? =
-When adding or editing a team member, you will see fields for social media profile URLs. Simply paste the links to their Facebook, Twitter, LinkedIn, Instagram, or other profiles.
+= How do I link social profiles to each team member? =
+Edit a member and paste their profile URLs.
+You can add links for Facebook, Twitter, and LinkedIn.
 
-= Can I customize the colors of the team cards? =
-Basic styling works with the free version. The premium version offers background color options and description text color customization for complete control over the look.
+= Can I change colors of the showcase cards? =
+The free templates use clean default colors.
+The premium version offers a color picker for cards and text.
 
-= Does this plugin work with page builders? =
-Yes, you can use the shortcode in most page builders including Elementor, Beaver Builder, Divi, and the native WordPress block editor.
+= Does this builder work with Elementor? =
+Yes, you can use the shortcode with any page builder.
+It works with Elementor, Divi, and the block editor.
 
-= Is the plugin translation ready? =
-Yes, the plugin supports translation. You can translate it into your language using standard WordPress translation methods.
-
-= Where can I get support if I have questions? =
-For the free version, use the WordPress.org support forum. Premium users receive priority support through our website.
+= Is this team member plugin translation ready? =
+Yes, you can translate all text into your language easily.
 
 == Changelog ==
+
+= 0.2.0 =
+* 2026/05/9
+* Security: Hardened AJAX callbacks with proper capability and nonce checks
+* Optimization: Removed heavy Font Awesome asset files for a 50% lighter package
+* Integration: Migrated administrative icons to native WordPress Dashicons
+* Feature: Added interactive Upgrade to Pro, Our Themes, and Our Plugins submenus
 
 = 0.1.16 =
 * Bug fixes
@@ -156,6 +177,9 @@ For the free version, use the WordPress.org support forum. Premium users receive
 * Tested with WordPress 6.6.2
 
 == Upgrade Notice ==
+
+= 0.2.0 =
+Important security hardening, 50% smaller footprint optimization, and new administrative submenu pages. Highly recommended update for all users.
 
 = 0.1.16 =
 Bug fixes and WordPress 6.9 compatibility testing. Update recommended for all users.

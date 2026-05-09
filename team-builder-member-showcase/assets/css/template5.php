@@ -38,18 +38,25 @@
 	justify-content: center;
 	list-style: none;
 	padding: 0;
+	margin-top: 15px;
 }
 .team-member_<?php echo esc_attr( $tbms_post_id ); ?> .social-icons_<?php echo esc_attr( $tbms_post_id ); ?> li {
 	margin: 0 10px;
 }
 .team-member_<?php echo esc_attr( $tbms_post_id ); ?> .social-icons_<?php echo esc_attr( $tbms_post_id ); ?> a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	color: #333;
-	font-size: 18px;
+	font-size: 20px;
 	text-decoration: none;
-	transition: color 0.3s;
+	transition: color 0.3s ease;
 }
 .team-member_<?php echo esc_attr( $tbms_post_id ); ?> .social-icons_<?php echo esc_attr( $tbms_post_id ); ?> a:hover {
-	color: <?php echo $tbms_background_team_color; ?>;
+	color: <?php echo esc_html( $tbms_background_team_color ); ?> !important;
 }
-
+.team-member_<?php echo esc_attr( $tbms_post_id ); ?> .social-icons_<?php echo esc_attr( $tbms_post_id ); ?> a svg {
+	width: 1.1em;
+	height: 1.1em;
+}
 </style>

@@ -63,13 +63,19 @@ figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?> .icons_<?php echo esc_a
   transition-delay: 0.2s;
 }
 
-figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?> .icons_<?php echo esc_attr( $tbms_post_id ); ?> a i {
+figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?> .icons_<?php echo esc_attr( $tbms_post_id ); ?> a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 24px;
   color: #000000;
   padding: 0px 8px;
+  text-decoration: none;
 }
 
-figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?> .icons_<?php echo esc_attr( $tbms_post_id ); ?> a i:before {
+figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?> .icons_<?php echo esc_attr( $tbms_post_id ); ?> a svg {
+  width: 1em;
+  height: 1em;
   opacity: 0;
   -webkit-transform: translateY(-20px);
   transform: translateY(-20px);
@@ -121,27 +127,27 @@ figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?>.hover .icons_<?php echo
   transform: translateY(0);
 }
 
-figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?>:hover .icons_<?php echo esc_attr( $tbms_post_id ); ?> a i:before,
-figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?>.hover .icons_<?php echo esc_attr( $tbms_post_id ); ?> a i:before {
+figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?>:hover .icons_<?php echo esc_attr( $tbms_post_id ); ?> a svg,
+figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?>.hover .icons_<?php echo esc_attr( $tbms_post_id ); ?> a svg {
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 
-figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?>:hover a:first-child i:before,
-figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?>.hover a:first-child i:before {
+figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?>:hover a:first-child svg,
+figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?>.hover a:first-child svg {
   -webkit-transition-delay: 0.4s;
   transition-delay: 0.4s;
 }
 
-figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?>:hover a:nth-child(2) i:before,
-figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?>.hover a:nth-child(2) i:before {
+figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?>:hover a:nth-child(2) svg,
+figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?>.hover a:nth-child(2) svg {
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
 
-figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?>:hover a:nth-child(3) i:before,
-figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?>.hover a:nth-child(3) i:before {
+figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?>:hover a:nth-child(3) svg,
+figure.snip1105_<?php echo esc_attr( $tbms_post_id ); ?>.hover a:nth-child(3) svg {
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }

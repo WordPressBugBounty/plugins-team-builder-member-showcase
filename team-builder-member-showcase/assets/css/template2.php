@@ -59,18 +59,32 @@ figure.snip1142_<?php echo esc_attr( $tbms_post_id ); ?> .icons_<?php echo esc_a
 
 figure.snip1142_<?php echo esc_attr( $tbms_post_id ); ?> i {
   margin-right: 5px;
-  display: inline-block;
-  font-size: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
   color: <?php echo esc_html( $tbms_background_team_color ); ?>;
   width: 35px;
   height: 35px;
-  line-height: 35px;
-  text-align: center;
   background: white;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
   background-color: rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  vertical-align: middle;
 }
-
+figure.snip1142_<?php echo esc_attr( $tbms_post_id ); ?> i a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+figure.snip1142_<?php echo esc_attr( $tbms_post_id ); ?> i svg {
+  width: 1.1em;
+  height: 1.1em;
+}
 figure.snip1142_<?php echo esc_attr( $tbms_post_id ); ?> i:hover {
   background-color: <?php echo esc_html( $tbms_background_team_color ); ?>;
   color: white !important;

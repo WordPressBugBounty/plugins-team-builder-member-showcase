@@ -32,20 +32,27 @@
   padding-bottom: 10px;
   text-align: center;
 }
-.tb-socio_<?php echo esc_attr( $tbms_post_id ); ?> .fa {
+.tb-socio_<?php echo esc_attr( $tbms_post_id ); ?> a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 33px;
   height: 33px;
   color: #b3bdc6;
   border-radius: 50% !important;
   border: solid 1px #d5d5d5;
-  font-size: 19px;
-  line-height: 19px;
+  font-size: 16px;
   margin: 0 7px;
-  padding-top: 7px;
-}
-.tb-socio_<?php echo esc_attr( $tbms_post_id ); ?> .fa:hover {
-  color: <?php echo esc_html( $tbms_background_team_color ); ?>;
-  border: solid 1px <?php echo esc_html( $tbms_background_team_color ); ?>;
+  transition: all 0.3s ease;
   text-decoration: none;
+  vertical-align: middle;
+}
+.tb-socio_<?php echo esc_attr( $tbms_post_id ); ?> a svg {
+  width: 1em;
+  height: 1em;
+}
+.tb-socio_<?php echo esc_attr( $tbms_post_id ); ?> a:hover {
+  color: <?php echo esc_html( $tbms_background_team_color ); ?> !important;
+  border: solid 1px <?php echo esc_html( $tbms_background_team_color ); ?>;
 }
 </style>

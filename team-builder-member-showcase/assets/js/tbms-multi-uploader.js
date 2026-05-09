@@ -76,7 +76,8 @@ jQuery(
 				};
 				var data = {
 					action: 'tbms_add_member_li',
-					slideId: id
+					slideId: id,
+					nonce: jQuery('#tbms_save_settings_nonce_name').val()
 				};
 				jQuery.post(
 					ajaxurl,

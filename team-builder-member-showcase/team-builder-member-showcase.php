@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Plugin Name:       Team Builder Member Showcase
  * Plugin URI:        https://awplife.com/
  * Description:       Create and display your dream team on your WordPress website in few minutes.
- * Version:           0.1.16
+ * Version:           0.2.0
  * Requires at least: 5.4
  * Requires PHP:      7.2
  * Author:            A WP Life
@@ -33,7 +33,7 @@ along with Team Builder Member Showcase. If not, see https://www.gnu.org/license
 
 add_image_size( 'tbms-custom-300', 300, 300, array( 'top', 'center' ) );
 add_image_size( 'tbms-custom-500', 500, 500, array( 'top', 'center' ) );
-add_option( 'awplife_tbms_plugin_version', '0.1.15' );
+add_option( 'awplife_tbms_plugin_version', '0.2.0' );
 
 if ( ! class_exists( 'TBMS_AWPLIFE' ) ) {
 	class TBMS_AWPLIFE {
@@ -45,7 +45,7 @@ if ( ! class_exists( 'TBMS_AWPLIFE' ) ) {
 
 		protected function _constants() {
 			// Plugin Version
-			define( 'TBMS_PLUGIN_VER', '0.1.15' );
+			define( 'TBMS_PLUGIN_VER', '0.2.0' );
 
 			// Plugin Text Domain
 			define( 'TBMS_TXTDM', 'team-builder-member-showcase' );
@@ -72,6 +72,9 @@ if ( ! class_exists( 'TBMS_AWPLIFE' ) ) {
 
 			// create TBMS custom post callback
 			add_action( 'init', array( $this, 'tbms_cpt' ) );
+
+			// register administrative Upgrade submenu
+			add_action( 'admin_menu', array( $this, 'tbms_register_upgrade_menu' ) );
 
 			// add TBMS meta box to custom post
 			add_action( 'add_meta_boxes', array( $this, 'tbms_add_meta_box' ) );
@@ -190,9 +193,130 @@ if ( ! class_exists( 'TBMS_AWPLIFE' ) ) {
 
 		// meta upgrade pro
 		public function tbms_upgrade_pro() { ?>
-			<img src="<?php echo esc_url(plugin_dir_url( __FILE__ ) . 'include/image/Untitled-1.png');?>"/ width="250" height="280">
-			<a href="https://awplife.com/demo/team-builder-member-showcase-premium/" target="_new" class="button button-primary button-large" style="text-shadow: none; margin-top:10px"><span class="dashicons dashicons-search" style="line-height:1.4;" ></span> Live Demo</a>
-			<a href="https://awplife.com/wordpress-plugins/team-builder-member-showcase-premium/" target="_new" class="button button-primary button-large" style="text-shadow: none; margin-top:10px"><span class="dashicons dashicons-unlock" style="line-height:1.4;" ></span> Upgrade Pro</a>
+			<div style="background: linear-gradient(135deg, #2c3e50, #34495e); color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); text-align: center; font-family: 'Segoe UI', Roboto, sans-serif;">
+				<span class="dashicons dashicons-star-filled" style="font-size: 40px; width: 40px; height: 40px; color: #f1c40f; margin-bottom: 10px;"></span>
+				<h3 style="margin: 0 0 10px; color: #fff; font-size: 16px; font-weight: 600; text-shadow: 0 1px 2px rgba(0,0,0,0.2);"><?php esc_html_e( 'Unlock Premium Layouts', 'team-builder-member-showcase' ); ?></h3>
+				<p style="font-size: 13px; line-height: 1.5; color: #ecf0f1; margin: 0 0 15px;"><?php esc_html_e( 'Upgrade to the Premium version to unlock 22 stunning template designs, interactive slider carousels, autoplay settings, and priority support!', 'team-builder-member-showcase' ); ?></p>
+				<div style="display: flex; flex-direction: column; gap: 8px;">
+					<a href="https://awplife.com/demo/team-builder-member-showcase-premium/" target="_new" class="button button-primary button-large" style="background: #3498db; border-color: #2980b9; text-shadow: none; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; gap: 6px;"><span class="dashicons dashicons-visibility" style="font-size: 18px; width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center;"></span><?php esc_html_e( 'Live Demo', 'team-builder-member-showcase' ); ?></a>
+					<a href="https://awplife.com/wordpress-plugins/team-builder-member-showcase-premium/" target="_new" class="button button-large" style="background: #e67e22; border-color: #d35400; color: #fff; text-shadow: none; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; gap: 6px;"><span class="dashicons dashicons-saved" style="font-size: 18px; width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center;"></span><?php esc_html_e( 'Upgrade to Pro', 'team-builder-member-showcase' ); ?></a>
+				</div>
+			</div>
+			<?php
+		}
+
+		// register upgrade to pro, our themes, and our plugins submenus
+		public function tbms_register_upgrade_menu() {
+			add_submenu_page(
+				'edit.php?post_type=tbms_cpt_name',
+				__( 'Upgrade to Pro', 'team-builder-member-showcase' ),
+				'<span style="color:#e67e22; font-weight:bold;">' . __( 'Upgrade to Pro', 'team-builder-member-showcase' ) . '</span>',
+				'manage_options',
+				'tbms-upgrade-pro',
+				array( $this, 'tbms_render_upgrade_page' )
+			);
+			add_submenu_page(
+				'edit.php?post_type=tbms_cpt_name',
+				__( 'Our Themes', 'team-builder-member-showcase' ),
+				__( 'Our Themes', 'team-builder-member-showcase' ),
+				'manage_options',
+				'tbms-our-themes',
+				array( $this, 'tbms_render_our_themes_page' )
+			);
+			add_submenu_page(
+				'edit.php?post_type=tbms_cpt_name',
+				__( 'Our Plugins', 'team-builder-member-showcase' ),
+				__( 'Our Plugins', 'team-builder-member-showcase' ),
+				'manage_options',
+				'tbms-our-plugins',
+				array( $this, 'tbms_render_our_plugins_page' )
+			);
+		}
+
+		// render our themes page callback
+		public function tbms_render_our_themes_page() {
+			add_thickbox();
+			wp_enqueue_style( 'tbms-our-plugins-style', TBMS_PLUGIN_URL . 'assets/css/our-plugins-style.css' );
+			include_once TBMS_PLUGIN_DIR . 'include/our-themes.php';
+		}
+
+		// render our plugins page callback
+		public function tbms_render_our_plugins_page() {
+			add_thickbox();
+			wp_enqueue_style( 'tbms-our-plugins-style', TBMS_PLUGIN_URL . 'assets/css/our-plugins-style.css' );
+			include_once TBMS_PLUGIN_DIR . 'include/our-plugins.php';
+		}
+
+		// render beautiful upgrade page
+		public function tbms_render_upgrade_page() {
+			?>
+			<div class="wrap" style="max-width: 1000px; margin: 30px auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;">
+				<!-- Header Card -->
+				<div style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); text-align: center; margin-bottom: 40px; position: relative; overflow: hidden;">
+					<div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(255,255,255,0.05); border-radius: 50%;"></div>
+					<span class="dashicons dashicons-groups" style="font-size: 64px; width: 64px; height: 64px; color: #f39c12; margin-bottom: 15px;"></span>
+					<h1 style="color: #fff; font-size: 32px; font-weight: 700; margin: 0 0 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.2);"><?php esc_html_e( 'Take Your Team Showcase to the Pro Level', 'team-builder-member-showcase' ); ?></h1>
+					<p style="font-size: 16px; color: #e0e0e0; max-width: 700px; margin: 0 auto 25px; line-height: 1.6;"><?php esc_html_e( 'Upgrade to Team Builder Showcase Premium and unlock 22 design templates, Owl Carousel slider capabilities, advanced design customizer, priority assistance, and more.', 'team-builder-member-showcase' ); ?></p>
+						<a href="https://awplife.com/demo/team-builder-member-showcase-premium/" target="_new" class="button button-hero" style="background: rgba(255,255,255,0.15); border: 2px solid #fff; color: #fff; font-weight: 600; text-shadow: none; border-radius: 30px; padding: 12px 30px; height: auto; display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.3s;"><span class="dashicons dashicons-visibility" style="font-size: 20px; width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center;"></span><?php esc_html_e( 'Explore Live Demo', 'team-builder-member-showcase' ); ?></a>
+						<a href="https://awplife.com/wordpress-plugins/team-builder-member-showcase-premium/" target="_new" class="button button-hero" style="background: #e67e22; border: 2px solid #e67e22; color: #fff; font-weight: 700; text-shadow: none; border-radius: 30px; padding: 12px 30px; height: auto; display: inline-flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 15px rgba(230,126,34,0.3); transition: all 0.3s;"><span class="dashicons dashicons-cart" style="font-size: 20px; width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center;"></span><?php esc_html_e( 'Get Premium Version', 'team-builder-member-showcase' ); ?></a>
+				</div>
+
+				<!-- Comparison Table -->
+				<div style="background: #fff; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.05); padding: 30px; overflow: hidden; margin-bottom: 40px;">
+					<h2 style="font-size: 24px; font-weight: 600; color: #2c3e50; text-align: center; margin-bottom: 30px;"><?php esc_html_e( 'Compare Free vs. Pro Features', 'team-builder-member-showcase' ); ?></h2>
+					<table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 15px;">
+						<thead>
+							<tr style="border-bottom: 2px solid #ecf0f1;">
+								<th style="padding: 15px; font-weight: 600; color: #7f8c8d;"><?php esc_html_e( 'Feature', 'team-builder-member-showcase' ); ?></th>
+								<th style="padding: 15px; font-weight: 600; color: #2ecc71; text-align: center; width: 180px;"><?php esc_html_e( 'Free Version', 'team-builder-member-showcase' ); ?></th>
+								<th style="padding: 15px; font-weight: 700; color: #e67e22; text-align: center; width: 180px; background: rgba(230,126,34,0.03);"><?php esc_html_e( 'Pro Premium', 'team-builder-member-showcase' ); ?></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr style="border-bottom: 1px solid #f1f2f6;">
+								<td style="padding: 15px; font-weight: 500; color: #2c3e50;"><?php esc_html_e( 'Design Templates', 'team-builder-member-showcase' ); ?></td>
+								<td style="padding: 15px; text-align: center; color: #7f8c8d;"><?php esc_html_e( '5 Templates', 'team-builder-member-showcase' ); ?></td>
+								<td style="padding: 15px; text-align: center; color: #e67e22; font-weight: bold; background: rgba(230,126,34,0.03);"><?php esc_html_e( '22 Templates', 'team-builder-member-showcase' ); ?></td>
+							</tr>
+							<tr style="border-bottom: 1px solid #f1f2f6;">
+								<td style="padding: 15px; font-weight: 500; color: #2c3e50;"><?php esc_html_e( 'Layout Slider Options', 'team-builder-member-showcase' ); ?></td>
+								<td style="padding: 15px; text-align: center; color: #e74c3c;"><span class="dashicons dashicons-no" style="color:#e74c3c;"></span> <?php esc_html_e( 'Grid Only', 'team-builder-member-showcase' ); ?></td>
+								<td style="padding: 15px; text-align: center; color: #2ecc71; font-weight: bold; background: rgba(230,126,34,0.03);"><span class="dashicons dashicons-yes" style="color:#2ecc71;"></span> <?php esc_html_e( 'Owl Carousel Slider + Grid', 'team-builder-member-showcase' ); ?></td>
+							</tr>
+							<tr style="border-bottom: 1px solid #f1f2f6;">
+								<td style="padding: 15px; font-weight: 500; color: #2c3e50;"><?php esc_html_e( 'Autoplay and Slider Speed', 'team-builder-member-showcase' ); ?></td>
+								<td style="padding: 15px; text-align: center; color: #e74c3c;"><span class="dashicons dashicons-no" style="color:#e74c3c;"></span></td>
+								<td style="padding: 15px; text-align: center; color: #2ecc71; font-weight: bold; background: rgba(230,126,34,0.03);"><span class="dashicons dashicons-yes" style="color:#2ecc71;"></span> <?php esc_html_e( 'Fully Customizable', 'team-builder-member-showcase' ); ?></td>
+							</tr>
+							<tr style="border-bottom: 1px solid #f1f2f6;">
+								<td style="padding: 15px; font-weight: 500; color: #2c3e50;"><?php esc_html_e( 'Social Media Connections', 'team-builder-member-showcase' ); ?></td>
+								<td style="padding: 15px; text-align: center; color: #7f8c8d;"><?php esc_html_e( 'Facebook, Twitter, LinkedIn', 'team-builder-member-showcase' ); ?></td>
+								<td style="padding: 15px; text-align: center; color: #2ecc71; font-weight: bold; background: rgba(230,126,34,0.03);"><span class="dashicons dashicons-yes" style="color:#2ecc71;"></span> <?php esc_html_e( 'Unlimited Profiles + Custom Hover', 'team-builder-member-showcase' ); ?></td>
+							</tr>
+							<tr style="border-bottom: 1px solid #f1f2f6;">
+								<td style="padding: 15px; font-weight: 500; color: #2c3e50;"><?php esc_html_e( 'Custom Background Colors', 'team-builder-member-showcase' ); ?></td>
+								<td style="padding: 15px; text-align: center; color: #e74c3c;"><span class="dashicons dashicons-no" style="color:#e74c3c;"></span></td>
+								<td style="padding: 15px; text-align: center; color: #2ecc71; font-weight: bold; background: rgba(230,126,34,0.03);"><span class="dashicons dashicons-yes" style="color:#2ecc71;"></span> <?php esc_html_e( 'Interactive Color-Picker', 'team-builder-member-showcase' ); ?></td>
+							</tr>
+							<tr style="border-bottom: 1px solid #f1f2f6;">
+								<td style="padding: 15px; font-weight: 500; color: #2c3e50;"><?php esc_html_e( 'Custom Biography and Text Color', 'team-builder-member-showcase' ); ?></td>
+								<td style="padding: 15px; text-align: center; color: #e74c3c;"><span class="dashicons dashicons-no" style="color:#e74c3c;"></span></td>
+								<td style="padding: 15px; text-align: center; color: #2ecc71; font-weight: bold; background: rgba(230,126,34,0.03);"><span class="dashicons dashicons-yes" style="color:#2ecc71;"></span> <?php esc_html_e( 'Responsive Color Settings', 'team-builder-member-showcase' ); ?></td>
+							</tr>
+							<tr style="border-bottom: 1px solid #f1f2f6;">
+								<td style="padding: 15px; font-weight: 500; color: #2c3e50;"><?php esc_html_e( 'Target Link Tabs (_blank, _self)', 'team-builder-member-showcase' ); ?></td>
+								<td style="padding: 15px; text-align: center; color: #e74c3c;"><span class="dashicons dashicons-no" style="color:#e74c3c;"></span></td>
+								<td style="padding: 15px; text-align: center; color: #2ecc71; font-weight: bold; background: rgba(230,126,34,0.03);"><span class="dashicons dashicons-yes" style="color:#2ecc71;"></span> <?php esc_html_e( 'Supported natively', 'team-builder-member-showcase' ); ?></td>
+							</tr>
+							<tr style="border-bottom: 1px solid #ecf0f1;">
+								<td style="padding: 15px; font-weight: 500; color: #2c3e50;"><?php esc_html_e( 'Customer Assistance', 'team-builder-member-showcase' ); ?></td>
+								<td style="padding: 15px; text-align: center; color: #7f8c8d;"><?php esc_html_e( 'Forum Support', 'team-builder-member-showcase' ); ?></td>
+								<td style="padding: 15px; text-align: center; color: #2ecc71; font-weight: bold; background: rgba(230,126,34,0.03);"><span class="dashicons dashicons-yes" style="color:#2ecc71;"></span> <?php esc_html_e( '24/7 Priority Support Desk', 'team-builder-member-showcase' ); ?></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
 			<?php
 		}
 		// meta rate us
@@ -210,7 +334,7 @@ if ( ! class_exists( 'TBMS_AWPLIFE' ) ) {
 		</div>
 		<br>
 		<div style="text-align:center">
-			<a href="https://wordpress.org/support/plugin/team-builder-member-showcase/reviews/?filter=5" target="_new" class="button button-primary button-large" style="text-shadow: none;"><span class="dashicons dashicons-heart" style="line-height:1.4;" ></span> Please Rate Us</a>
+			<a href="https://wordpress.org/support/plugin/team-builder-member-showcase/reviews/" target="_new" class="button button-primary button-large" style="text-shadow: none;"><span class="dashicons dashicons-heart" style="line-height:1.4;" ></span> Please Rate Us</a>
 		</div>	
 			<?php
 		}
@@ -291,7 +415,7 @@ if ( ! class_exists( 'TBMS_AWPLIFE' ) ) {
 												<input type="text" id="tbms_icon_link_url_second[]" name="tbms_icon_link_url_second[]" class="form-control team-style-two" placeholder="<?php esc_html_e( 'Twitter URL', 'team-builder-member-showcase' ); ?>" value="#">
 												<input type="text" id="tbms_icon_link_url_third[]" name="tbms_icon_link_url_third[]" class="form-control team-style-two" placeholder="<?php esc_html_e( 'LinkedIn URL', 'team-builder-member-showcase' ); ?>" value="#">
 												<button class="btn btn-block btn-danger" id="team_column_delete" name="team_column_delete" value="tbms-member-<?php echo esc_attr( $id ); ?>">
-													<i class="fa fa-trash"></i> &nbsp; <?php esc_html_e( 'Delete Team Member', 'team-builder-member-showcase' ); ?>
+													<span class="dashicons dashicons-trash" style="vertical-align:middle;"></span> &nbsp; <?php esc_html_e( 'Delete Team Member', 'team-builder-member-showcase' ); ?>
 												</button>
 											</div>
 										</div>
@@ -319,7 +443,13 @@ if ( ! class_exists( 'TBMS_AWPLIFE' ) ) {
 		} //end of if
 
 		public function tbms_ajax_add_member_li_callback() {
-			echo esc_attr( $this->tbms_ajax_plugin_add_member( $_POST['slideId'] ) );
+			if ( ! current_user_can( 'edit_posts' ) ) {
+				wp_die( 'Permission denied.' );
+			}
+			if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'tbms_save_settings_nonce_action' ) ) {
+				wp_die( 'Security verification failed.' );
+			}
+			echo $this->tbms_ajax_plugin_add_member( intval( $_POST['slideId'] ) );
 			die;
 		}
 
@@ -376,6 +506,21 @@ if ( ! class_exists( 'TBMS_AWPLIFE' ) ) {
 				}
 			}//// end save setting
 		}//end tbms_save_settings()
+	}
+
+	/**
+	 * Helper function to return high-performance, responsive inline SVG icons
+	 * for the social networks, completely replacing Font Awesome.
+	 * Supports backward-compatibility for previously saved Font Awesome classes.
+	 */
+	function tbms_get_social_svg( $icon_class ) {
+		$icon_class = str_replace( 'fa-', '', strtolower( trim( $icon_class ) ) );
+		$svgs = array(
+			'twitter'   => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" style="vertical-align: middle; display: inline-block;" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>',
+			'linkedin'  => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" style="vertical-align: middle; display: inline-block;" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>',
+			'facebook'  => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" width="1em" height="1em" style="vertical-align: middle; display: inline-block;" fill="currentColor"><g transform="scale(1, -1) translate(0, -1536)"><path d="M959 1524v-264h-157q-86 0 -116 -36t-30 -108v-189h293l-39 -296h-254v-759h-306v759h-255v296h255v218q0 186 104 288.5t277 102.5q147 0 228 -12z" /></g></svg>'
+		);
+		return isset( $svgs[ $icon_class ] ) ? $svgs[ $icon_class ] : '';
 	}
 
 	$tbms_object = new TBMS_AWPLIFE();

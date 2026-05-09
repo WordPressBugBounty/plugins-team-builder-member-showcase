@@ -12,7 +12,6 @@ wp_enqueue_script( 'awplife-tbms-multi-uploader-js', TBMS_PLUGIN_URL . 'assets/j
 wp_enqueue_script( 'awplife-tbms-color-picker-js', TBMS_PLUGIN_URL . 'assets/js/tbms-color-picker.js', array( 'jquery', 'wp-color-picker' ), '', true );
 wp_enqueue_style( 'wp-color-picker' );
 wp_enqueue_style( 'awplife-tbms-media-uploader-css', TBMS_PLUGIN_URL . 'assets/css/team-media-uploader.css' );
-wp_enqueue_style( 'awplife-tbms-font-awesome-min-css', TBMS_PLUGIN_URL . 'assets/css/font-awesome.css' );
 wp_enqueue_style( 'awplife-tbms-bootstrap-css', TBMS_PLUGIN_URL . 'assets/css/bootstrap.css' );
 ?>
 <div class="card">
@@ -86,10 +85,10 @@ wp_enqueue_style( 'awplife-tbms-bootstrap-css', TBMS_PLUGIN_URL . 'assets/css/bo
 	<div class="card-body">
 		<div align="left">
 			<div class="btn btn-rounded peach-gradient btn-lg" id="team_column_button" name="team_column_button">
-				<i class="fa fa-user-circle"></i> &nbsp; <?php esc_html_e( 'Add Team Members', 'team-builder-member-showcase' ); ?>
+				<span class="dashicons dashicons-admin-users" style="font-size:24px; width:24px; height:24px; vertical-align:middle; line-height:24px;"></span> &nbsp; <?php esc_html_e( 'Add Team Members', 'team-builder-member-showcase' ); ?>
 			</div>
 			<div class="btn btn-danger btn-lg float-right" id="team_column_delete_all" name="team_column_delete_all">
-				<i class="fa fa-trash"></i> &nbsp; <?php esc_html_e( 'Delete All Team Members', 'team-builder-member-showcase' ); ?>
+				<span class="dashicons dashicons-trash" style="font-size:24px; width:24px; height:24px; vertical-align:middle; line-height:24px;"></span> &nbsp; <?php esc_html_e( 'Delete All Team Members', 'team-builder-member-showcase' ); ?>
 			</div>
 		</div>
 	</div>
@@ -140,7 +139,7 @@ wp_enqueue_style( 'awplife-tbms-bootstrap-css', TBMS_PLUGIN_URL . 'assets/css/bo
 														<input type="text" id="tbms_icon_link_url_second[]" name="tbms_icon_link_url_second[]" class="form-control team-style-two" placeholder="<?php esc_html_e( 'Twitter URL', 'team-builder-member-showcase' ); ?>" value="<?php echo esc_url( $tbms_icon_link_url_second ); ?>">
 														<input type="text" id="tbms_icon_link_url_third[]" name="tbms_icon_link_url_third[]" class="form-control team-style-two" placeholder="<?php esc_html_e( 'LinkedIn URL', 'team-builder-member-showcase' ); ?>" value="<?php echo esc_url( $tbms_icon_link_url_third ); ?>">
 														<button class="btn btn-block btn-danger" id="team_column_delete" name="team_column_delete" value="tbms-member-<?php echo esc_attr( $id ); ?>">
-															<i class="fa fa-trash"></i> &nbsp; <?php esc_html_e( 'Delete Team Member', 'team-builder-member-showcase' ); ?>
+															<span class="dashicons dashicons-trash" style="vertical-align:middle;"></span> &nbsp; <?php esc_html_e( 'Delete Team Member', 'team-builder-member-showcase' ); ?>
 														</button>
 													</div>
 												</div>

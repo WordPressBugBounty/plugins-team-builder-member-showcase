@@ -21,7 +21,6 @@ function tbms_shortcode( $post_id ) {
 
 	wp_enqueue_script( 'awplife-tbms-bootstrap-js', TBMS_PLUGIN_URL . 'assets/js/bootstrap.js', array( 'jquery' ), '', false );
 	wp_enqueue_style( 'awplife-tbms-bootstrap-css', TBMS_PLUGIN_URL . 'assets/css/tbms-frontend-bootstrap.css' );
-	wp_enqueue_style( 'awplife-tbms-font-awesome-css', TBMS_PLUGIN_URL . 'assets/css/font-awesome.css' );
 
 	// post Setting
 	if ( isset( $tbms_post_settings['tbms_template_design'] ) ) {
@@ -78,9 +77,40 @@ function tbms_shortcode( $post_id ) {
 	?>
 <style>	
 	<?php echo $tbms_custom_css; ?>
+	/* Modern Inline SVG Alignment & Sizing Fixes */
+	.all-team svg {
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		vertical-align: middle;
+		fill: currentColor;
+	}
+	.all-team i, .all-team li {
+		display: inline-flex !important;
+		align-items: center;
+		justify-content: center;
+		vertical-align: middle;
+	}
+	.all-team i a, .all-team li a {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		color: inherit;
+		width: 100%;
+		height: 100%;
+	}
 </style>	
 	<?php
 	wp_reset_query();
-	return ob_get_clean();
+	$html = ob_get_clean();
+	$html = preg_replace_callback(
+		'/<i class=["\']fa\s+([^"\']+)["\']><\/i>/i',
+		function( $matches ) {
+			return tbms_get_social_svg( $matches[1] );
+		},
+		$html
+	);
+	return $html;
 }
 ?>

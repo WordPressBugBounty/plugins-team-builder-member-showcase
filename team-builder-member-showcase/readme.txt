@@ -3,7 +3,7 @@ Contributors: awordpresslife, razipathhan, hanif0991, muhammadshahid, fkfaisalkh
 Donate link: https://paypal.me/awplife
 Tags: team member, team showcase, staff directory, meet the team, our team
 Requires at least: 5.4
-Tested up to: 6.9
+Tested up to: 7.1
 Requires PHP: 7.2
 Stable tag: 0.2.0
 License: GPLv2 or later
